@@ -24,7 +24,9 @@ if(!isnull _target) then {
 		} else {
 			player playMove "AinvPknlMstpSnonWnonDnon_medic_1";
 		};
+		disableUserInput true;
 		sleep 6;
+		disableUserInput false;
 		_target setVariable ["AT_Revive_isDragged", objNull, true];
 		
 		if(!(player getVariable ["AT_Revive_isUnconscious",false])) then {
